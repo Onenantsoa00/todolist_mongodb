@@ -4,8 +4,7 @@ import { ObjectId } from "mongodb";
 const read = async (req, res) => {
   try {
     const db = getDB(); // Accède à l'instance de la base de données
-    const tasks = await db.collection("tasks").find({}).toArray(); // Remplacez 'tasks' par le nom de votre collection
-
+    const tasks = await db.collection("tasks").find({}).toArray();
     res.json(tasks); // Retourne les données en JSON
   } catch (error) {
     console.error("Erreur lors de la lecture:", error);
@@ -169,7 +168,7 @@ const filtrage_par_status = async (req, res) => {
       .collection("tasks")
       .find()
       .sort({ status: 1 })
-      .toArray(); // Ajout de .toArray() ici
+      .toArray();
 
     res.status(200).json(tasks);
   } catch (error) {
@@ -185,8 +184,7 @@ const filtrage_par_status_decroissant = async (req, res) => {
       .collection("tasks")
       .find()
       .sort({ status: -1 })
-      .toArray(); // Ajout de .toArray() ici
-
+      .toArray();
     res.status(200).json(tasks);
   } catch (error) {
     console.error("Erreur lors du filtrage par statut:", error);

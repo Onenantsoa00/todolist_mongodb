@@ -293,13 +293,11 @@ export default {
             description: "",
           };
         });
-      alert("io fa mety");
+      alert("Ajout réussit");
       window.location.reload();
     },
   },
 };
 </script>
 
-<style scoped>
-/* Vous pouvez ajouter des styles ici si nécessaire, mais ce n'est pas obligatoire */
-</style>
+<style scoped></style>
